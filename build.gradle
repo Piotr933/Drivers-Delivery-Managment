@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.0-M2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.piotrzawada'
@@ -20,4 +21,8 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+application {
+	mainClass.set('com.piotrzawada.driversdeliverymanagment.DriversDeliveryManagmentApplication')
 }
