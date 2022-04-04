@@ -1,4 +1,4 @@
-package com.piotrzawada.driversdeliverymanagment;
+package com.piotrzawada.driversdeliverymanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
