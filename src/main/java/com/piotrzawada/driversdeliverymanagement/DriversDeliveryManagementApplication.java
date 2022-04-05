@@ -1,5 +1,6 @@
 package com.piotrzawada.driversdeliverymanagement;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,13 +25,13 @@ public class DriversDeliveryManagementApplication {
 
 
 	@Bean
-	public ArrayList<Driver> drivers(@Qualifier("data") LoadData loadData) {
+	public ArrayList<Driver> drivers(@Autowired LoadData loadData) {
 		return loadData.loadDriversInfo();
 	}
 
 
 	@Bean
-	public ArrayList<Route> routes(@Qualifier("data") LoadData loadData) {
+	public ArrayList<Route> routes(@Autowired LoadData loadData) {
 		return loadData.loadRoutesInfo();
 	}
 }
