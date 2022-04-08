@@ -17,7 +17,7 @@ public class LoadData {
         routesParser = ReadCsvFile.getCsvParser(routesData);
     }
 
-    public ArrayList loadDriversInfo() {
+    public ArrayList<Driver> loadDriversInfo() {
         final int driverID = 0;
         final int driverName = 1;
         final int routeKnowledge = 2;
@@ -32,7 +32,7 @@ public class LoadData {
     }
 
 
-    public ArrayList loadRoutesInfo() {
+    public ArrayList<Route> loadRoutesInfo() {
         final int routeID = 0;
         final int firstLoc = 1;
         final int lastLoc = 2;

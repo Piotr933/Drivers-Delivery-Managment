@@ -19,8 +19,7 @@ public class DriversDeliveryManagementApplication {
 
 	@Bean
 	LoadData data() throws IOException {
-		LoadData loadData = new LoadData("data/drivers_sample1.csv", "data/routes_sample1.csv");
-		return loadData;
+		return new LoadData("data/drivers_sample1.csv", "data/routes_sample1.csv");
 	}
 
 
