@@ -7,7 +7,7 @@ plugins {
 
 group = 'com.piotrzawada'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = "14"
 
 repositories {
 	mavenCentral()
@@ -32,3 +32,4 @@ run {
 	standardInput = System.in
 }
 
+targetCompatibility = JavaVersion.VERSION_14
