@@ -4,6 +4,7 @@ package com.piotrzawada.driversdeliverymanagement;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 @Configuration
 public class Menu {
@@ -38,7 +39,8 @@ public class Menu {
                     break;
 
                 case  "4":
-                    System.out.println("Under Construction");
+                    Roster roster = new Roster(routesData, driversData);
+                    print.printRoster(roster);
                     break;
 
                 case  "5":
