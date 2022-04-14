@@ -1,10 +1,6 @@
 package com.piotrzawada.driversdeliverymanagement;
-
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -13,8 +9,8 @@ public class LoadData {
     CSVParser routesParser;
 
     public LoadData(String driversData, String routesData) throws IOException {
-        driversParser = ReadCsvFile.getCsvParser(driversData);
-        routesParser = ReadCsvFile.getCsvParser(routesData);
+        driversParser = ReadCsvFile.getCsvParser("drivers");
+        routesParser = ReadCsvFile.getCsvParser("routes");
     }
 
     public ArrayList<Driver> loadDriversInfo() {
