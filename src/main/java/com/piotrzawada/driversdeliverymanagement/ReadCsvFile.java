@@ -24,7 +24,12 @@ public class ReadCsvFile {
             File selectedFile = chooser.getSelectedFile();
             System.out.println(selectedFile.getAbsolutePath());
             Reader reader = Files.newBufferedReader(Paths.get(selectedFile.getAbsolutePath()));
-            return new CSVParser(reader, CSVFormat.DEFAULT);
+            return new CSVParser(reader, CSVFormat.Builder
+                    .create()
+                    .setHeader()
+                    .setSkipHeaderRecord(true)
+                    .setIgnoreHeaderCase(true)
+                    .build());
         }
         return null;
     }
